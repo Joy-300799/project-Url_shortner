@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect("mongodb+srv://users-open-to-all:hiPassword123@cluster0.uh35t.mongodb.net/Immortals-group7?retryWrites=true&w=majority", { useNewUrlParser: true })
-    .then(() => console.log('Three musketeers ready to roll !'))
+    .then(() => console.log('Immortals are ready to roll !'))
     .catch(err => console.log(err))
 
 app.use('/', route);
