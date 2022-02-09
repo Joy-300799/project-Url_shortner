@@ -12,4 +12,5 @@ redisClient.auth("2tmMudjaWwiAvxVW9pXj2Xq0U20LTPRx", function(err) {
 redisClient.on("connect", async function() {
     console.log("Connected to Redis..");
 });
+
 module.exports.redisClient = redisClient;

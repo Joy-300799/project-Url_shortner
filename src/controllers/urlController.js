@@ -124,6 +124,7 @@ let redirectUrl = async function (req, res) {
       // console.log(originalUrlDetails)
 
       if (originalUrlDetails) {
+        await SET_ASYNC(`${urlCode}`, originalUrlDetails.longUrl);
         return res.redirect(307,originalUrlDetails.longUrl);
       } else {
         return res.status(404).send({ status: false, msg: "No URL Found" });
