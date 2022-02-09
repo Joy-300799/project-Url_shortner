@@ -1,6 +1,4 @@
-# Radium 
-
-## Scalable URL Shortner Project Requirement
+## Scalable URL Shortner Project 
 
 ## Phase I
 
@@ -32,7 +30,7 @@ If you haven’t used tinyurl.com before, please try creating a new shortened UR
 
 ### Models
 - Url Model
-```
+```yaml
 { urlCode: { mandatory, unique, lowercase, trim }, longUrl: {mandatory, valid url}, shortUrl: {mandatory, unique} }
 ```
 
