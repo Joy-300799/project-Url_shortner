@@ -115,7 +115,7 @@ let redirectUrl = async function (req, res) {
 
     //from cache
     if (parsedUrl) {
-      return res.redirect(307,parsedUrl);
+      return res.redirect(307, parsedUrl);
     } else {
       //From Database
       const originalUrlDetails = await urlModel.findOne({
@@ -124,7 +124,7 @@ let redirectUrl = async function (req, res) {
       // console.log(originalUrlDetails)
 
       if (originalUrlDetails) {
-        return res.redirect(307,originalUrlDetails.longUrl);
+        return res.redirect(307, originalUrlDetails.longUrl);
       } else {
         return res.status(404).send({ status: false, msg: "No URL Found" });
       }
