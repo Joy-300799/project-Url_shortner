@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const route = require('./routes/route.js');
 
 const app = express();
-
 app.use(bodyParser.json());
 
 mongoose.connect("mongodb+srv://Joy-DB:joy123@cluster0.e8rbz.mongodb.net/URL_shortener", { useNewUrlParser: true })
@@ -13,6 +12,7 @@ mongoose.connect("mongodb+srv://Joy-DB:joy123@cluster0.e8rbz.mongodb.net/URL_sho
 
 app.use('/', route);
 
-app.listen(process.env.PORT || 3000, function() {
-    console.log('Express app running on port ' + (process.env.PORT || 3000))
+app.listen(3000, function() {
+    console.log('Express app running on port ' +  3000)
 });
+
